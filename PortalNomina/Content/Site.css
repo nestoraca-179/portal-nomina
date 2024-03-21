@@ -1,0 +1,33 @@
+﻿.main-container {
+    width: 847px;
+    height: 100vh; /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#5a5bf3+0,91e7d9+100 */
+    background: #5a5bf3; /* Old browsers */
+    background: -moz-linear-gradient(left, #5a5bf3 0%, #91e7d9 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #5a5bf3 0%,#91e7d9 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #5a5bf3 0%,#91e7d9 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-container > .container {
+    width: 100%;
+}
+.main-container > .container form {
+    width: 40%;
+    height: 400px;
+    background: #FFF;
+    margin: 0 auto;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.main-container > .container form input {
+    margin: 0 auto;
+    padding: 5px 10px;
+    border: 0;
+    border-bottom: solid 1px #dbdbdb;
+}
+.main-container > .container form button {
+    margin: 0 auto;
+}

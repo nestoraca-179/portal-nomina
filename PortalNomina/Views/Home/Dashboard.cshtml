@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "Dashboard";
+}
+<style>
+    #RepReciboPagoTipo2_2KDoce {
+        height: 100% !important;
+    }
+</style>
+<h2>Dashboard</h2>
+<hr />
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-10" style="overflow-y: auto; height: 650px;">
+            @*@Html.ActionLink("Enviar por correo", "RepReciboPagoTipo2_2KDocePartialExport", "Reports")*@
+            <button type="button" onclick="getParams()">Enviar Reporte por correo</button>
+            @Html.Action("RepReciboPagoTipo2_2KDocePartial", "Reports")
+        </div>
+    </div>
+</div>
+<script>
+    function getParams() {
+        var params = document.querySelectorAll(".dx-fieldset input[type=hidden]");
+        var strParams = "";
+
+        for (var param of params) {
+            if (param.value != null && param.value != "")
+                strParams += param.value.toString().replaceAll("-", "").trim();
+            else
+                strParams += "_"
+
+            strParams += "-";
+        }
+
+        strParams = strParams.slice(0, -1);
+        console.log(strParams);
+        location.href = "/Reports/RepReciboPagoTipo2_2KDocePartialExport?param=" + strParams;
+    }
+</script>
