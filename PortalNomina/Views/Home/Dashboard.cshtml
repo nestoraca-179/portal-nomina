@@ -13,7 +13,7 @@
         <div class="col-md-2"></div>
         <div class="col-md-10" style="overflow-y: auto; height: 650px;">
             @*@Html.ActionLink("Enviar por correo", "RepReciboPagoTipo2_2KDocePartialExport", "Reports")*@
-            <button type="button" onclick="getParams()">Enviar Reporte por correo</button>
+            <button type="button" id="btnSendReport" disabled onclick="getParams()">Enviar Reporte por correo</button>
             @Html.Action("RepReciboPagoTipo2_2KDocePartial", "Reports")
         </div>
     </div>

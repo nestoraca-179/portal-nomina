@@ -2,11 +2,19 @@
     function WebDocumentViewer_Init(s, e) {
         s.GetPreviewModel().reportPreview.zoom(1);
     }
+    function WebDocumentViewer_DocumentReady(s, e) {
+        $("#btnSendReport").removeAttr("disabled");
+    }
+    function WebDocumentViewer_ParametersSubmitted(s, e) {
+        $("#btnSendReport").prop("disabled", "true");
+    }
 </script>
 
 @Html.DevExpress().WebDocumentViewer(settings =>
 {
     settings.Name = "RepReciboPagoTipo2_2KDoce";
     settings.ClientSideEvents.Init = "WebDocumentViewer_Init";
+    settings.ClientSideEvents.DocumentReady = "WebDocumentViewer_DocumentReady";
+    settings.ClientSideEvents.ParametersSubmitted = "WebDocumentViewer_ParametersSubmitted";
 
 }).Bind(Model).GetHtml()

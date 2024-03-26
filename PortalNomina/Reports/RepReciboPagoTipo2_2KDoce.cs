@@ -171,6 +171,9 @@ public class RepReciboPagoTipo2_2KDoce : DevExpress.XtraReports.UI.XtraReport
             DevExpress.DataAccess.Sql.CustomSqlQuery customSqlQuery1 = new DevExpress.DataAccess.Sql.CustomSqlQuery();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RepReciboPagoTipo2_2KDoce));
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings1 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
+            DevExpress.XtraReports.UI.XRSummary xrSummary1 = new DevExpress.XtraReports.UI.XRSummary();
+            DevExpress.XtraReports.UI.XRSummary xrSummary2 = new DevExpress.XtraReports.UI.XRSummary();
+            DevExpress.XtraReports.UI.XRSummary xrSummary3 = new DevExpress.XtraReports.UI.XRSummary();
             this.DS_NOMI = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.Title = new DevExpress.XtraReports.UI.XRControlStyle();
             this.DetailCaption1 = new DevExpress.XtraReports.UI.XRControlStyle();
@@ -184,6 +187,13 @@ public class RepReciboPagoTipo2_2KDoce : DevExpress.XtraReports.UI.XtraReport
             this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
             this.label1 = new DevExpress.XtraReports.UI.XRLabel();
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
+            this.xrLine32 = new DevExpress.XtraReports.UI.XRLine();
+            this.xrLine31 = new DevExpress.XtraReports.UI.XRLine();
+            this.xrLine30 = new DevExpress.XtraReports.UI.XRLine();
+            this.xrLine29 = new DevExpress.XtraReports.UI.XRLine();
+            this.xrLine28 = new DevExpress.XtraReports.UI.XRLine();
+            this.xrLine26 = new DevExpress.XtraReports.UI.XRLine();
+            this.xrLine27 = new DevExpress.XtraReports.UI.XRLine();
             this.xrLabel18 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel17 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel16 = new DevExpress.XtraReports.UI.XRLabel();
@@ -210,6 +220,7 @@ public class RepReciboPagoTipo2_2KDoce : DevExpress.XtraReports.UI.XtraReport
             this.xrLine1 = new DevExpress.XtraReports.UI.XRLine();
             this.groupHeaderBand1 = new DevExpress.XtraReports.UI.GroupHeaderBand();
             this.groupHeaderBand2 = new DevExpress.XtraReports.UI.GroupHeaderBand();
+            this.xrLine15 = new DevExpress.XtraReports.UI.XRLine();
             this.xrLine8 = new DevExpress.XtraReports.UI.XRLine();
             this.xrLine14 = new DevExpress.XtraReports.UI.XRLine();
             this.xrLine13 = new DevExpress.XtraReports.UI.XRLine();
@@ -241,6 +252,12 @@ public class RepReciboPagoTipo2_2KDoce : DevExpress.XtraReports.UI.XtraReport
             this.xrLine6 = new DevExpress.XtraReports.UI.XRLine();
             this.groupFooterBand1 = new DevExpress.XtraReports.UI.GroupFooterBand();
             this.groupFooterBand2 = new DevExpress.XtraReports.UI.GroupFooterBand();
+            this.xrLine38 = new DevExpress.XtraReports.UI.XRLine();
+            this.xrLine37 = new DevExpress.XtraReports.UI.XRLine();
+            this.xrLine36 = new DevExpress.XtraReports.UI.XRLine();
+            this.xrLine35 = new DevExpress.XtraReports.UI.XRLine();
+            this.xrLine34 = new DevExpress.XtraReports.UI.XRLine();
+            this.xrLine33 = new DevExpress.XtraReports.UI.XRLine();
             this.xrLine25 = new DevExpress.XtraReports.UI.XRLine();
             this.xrRichText20 = new DevExpress.XtraReports.UI.XRRichText();
             this.xrLine24 = new DevExpress.XtraReports.UI.XRLine();
@@ -264,20 +281,6 @@ public class RepReciboPagoTipo2_2KDoce : DevExpress.XtraReports.UI.XtraReport
             this.totalDeducciones = new DevExpress.XtraReports.UI.CalculatedField();
             this.asignacion = new DevExpress.XtraReports.UI.CalculatedField();
             this.deduccion = new DevExpress.XtraReports.UI.CalculatedField();
-            this.xrLine27 = new DevExpress.XtraReports.UI.XRLine();
-            this.xrLine26 = new DevExpress.XtraReports.UI.XRLine();
-            this.xrLine28 = new DevExpress.XtraReports.UI.XRLine();
-            this.xrLine29 = new DevExpress.XtraReports.UI.XRLine();
-            this.xrLine30 = new DevExpress.XtraReports.UI.XRLine();
-            this.xrLine31 = new DevExpress.XtraReports.UI.XRLine();
-            this.xrLine15 = new DevExpress.XtraReports.UI.XRLine();
-            this.xrLine32 = new DevExpress.XtraReports.UI.XRLine();
-            this.xrLine33 = new DevExpress.XtraReports.UI.XRLine();
-            this.xrLine34 = new DevExpress.XtraReports.UI.XRLine();
-            this.xrLine35 = new DevExpress.XtraReports.UI.XRLine();
-            this.xrLine36 = new DevExpress.XtraReports.UI.XRLine();
-            this.xrLine37 = new DevExpress.XtraReports.UI.XRLine();
-            this.xrLine38 = new DevExpress.XtraReports.UI.XRLine();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText2)).BeginInit();
@@ -482,6 +485,62 @@ public class RepReciboPagoTipo2_2KDoce : DevExpress.XtraReports.UI.XtraReport
             this.Detail.HeightF = 25.70057F;
             this.Detail.KeepTogether = true;
             this.Detail.Name = "Detail";
+            // 
+            // xrLine32
+            // 
+            this.xrLine32.AnchorVertical = ((DevExpress.XtraReports.UI.VerticalAnchorStyles)((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top | DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom)));
+            this.xrLine32.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
+            this.xrLine32.LocationFloat = new DevExpress.Utils.PointFloat(807.8198F, 0F);
+            this.xrLine32.Name = "xrLine32";
+            this.xrLine32.SizeF = new System.Drawing.SizeF(2.180229F, 25.70057F);
+            // 
+            // xrLine31
+            // 
+            this.xrLine31.AnchorVertical = ((DevExpress.XtraReports.UI.VerticalAnchorStyles)((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top | DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom)));
+            this.xrLine31.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
+            this.xrLine31.LocationFloat = new DevExpress.Utils.PointFloat(692.3615F, 0F);
+            this.xrLine31.Name = "xrLine31";
+            this.xrLine31.SizeF = new System.Drawing.SizeF(2.180229F, 25.70057F);
+            // 
+            // xrLine30
+            // 
+            this.xrLine30.AnchorVertical = ((DevExpress.XtraReports.UI.VerticalAnchorStyles)((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top | DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom)));
+            this.xrLine30.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
+            this.xrLine30.LocationFloat = new DevExpress.Utils.PointFloat(586.7379F, 0F);
+            this.xrLine30.Name = "xrLine30";
+            this.xrLine30.SizeF = new System.Drawing.SizeF(2.180229F, 25.70057F);
+            // 
+            // xrLine29
+            // 
+            this.xrLine29.AnchorVertical = ((DevExpress.XtraReports.UI.VerticalAnchorStyles)((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top | DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom)));
+            this.xrLine29.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
+            this.xrLine29.LocationFloat = new DevExpress.Utils.PointFloat(484.6546F, 0F);
+            this.xrLine29.Name = "xrLine29";
+            this.xrLine29.SizeF = new System.Drawing.SizeF(2.180229F, 25.70057F);
+            // 
+            // xrLine28
+            // 
+            this.xrLine28.AnchorVertical = ((DevExpress.XtraReports.UI.VerticalAnchorStyles)((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top | DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom)));
+            this.xrLine28.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
+            this.xrLine28.LocationFloat = new DevExpress.Utils.PointFloat(370.143F, 0F);
+            this.xrLine28.Name = "xrLine28";
+            this.xrLine28.SizeF = new System.Drawing.SizeF(2.180229F, 25.70057F);
+            // 
+            // xrLine26
+            // 
+            this.xrLine26.AnchorVertical = ((DevExpress.XtraReports.UI.VerticalAnchorStyles)((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top | DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom)));
+            this.xrLine26.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
+            this.xrLine26.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.xrLine26.Name = "xrLine26";
+            this.xrLine26.SizeF = new System.Drawing.SizeF(2.180229F, 25.70057F);
+            // 
+            // xrLine27
+            // 
+            this.xrLine27.AnchorVertical = ((DevExpress.XtraReports.UI.VerticalAnchorStyles)((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top | DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom)));
+            this.xrLine27.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
+            this.xrLine27.LocationFloat = new DevExpress.Utils.PointFloat(86.22635F, 0F);
+            this.xrLine27.Name = "xrLine27";
+            this.xrLine27.SizeF = new System.Drawing.SizeF(2.180229F, 25.70057F);
             // 
             // xrLabel18
             // 
@@ -808,8 +867,16 @@ public class RepReciboPagoTipo2_2KDoce : DevExpress.XtraReports.UI.XtraReport
             this.groupHeaderBand2.Name = "groupHeaderBand2";
             this.groupHeaderBand2.PageBreak = DevExpress.XtraReports.UI.PageBreak.BeforeBandExceptFirstEntry;
             // 
+            // xrLine15
+            // 
+            this.xrLine15.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
+            this.xrLine15.LocationFloat = new DevExpress.Utils.PointFloat(692.3615F, 87.2169F);
+            this.xrLine15.Name = "xrLine15";
+            this.xrLine15.SizeF = new System.Drawing.SizeF(2.083374F, 35.78311F);
+            // 
             // xrLine8
             // 
+            this.xrLine8.AnchorVertical = ((DevExpress.XtraReports.UI.VerticalAnchorStyles)((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top | DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom)));
             this.xrLine8.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
             this.xrLine8.LocationFloat = new DevExpress.Utils.PointFloat(0F, 5.99999F);
             this.xrLine8.Name = "xrLine8";
@@ -1094,6 +1161,7 @@ public class RepReciboPagoTipo2_2KDoce : DevExpress.XtraReports.UI.XtraReport
             // 
             // xrLine9
             // 
+            this.xrLine9.AnchorVertical = ((DevExpress.XtraReports.UI.VerticalAnchorStyles)((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top | DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom)));
             this.xrLine9.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
             this.xrLine9.LocationFloat = new DevExpress.Utils.PointFloat(807.9167F, 5.999992F);
             this.xrLine9.Name = "xrLine9";
@@ -1145,9 +1213,50 @@ public class RepReciboPagoTipo2_2KDoce : DevExpress.XtraReports.UI.XtraReport
             this.xrLabel19,
             this.xrRichText17,
             this.xrLine16});
-            this.groupFooterBand2.HeightF = 106.7476F;
+            this.groupFooterBand2.HeightF = 100.6635F;
             this.groupFooterBand2.KeepTogether = true;
             this.groupFooterBand2.Name = "groupFooterBand2";
+            // 
+            // xrLine38
+            // 
+            this.xrLine38.LocationFloat = new DevExpress.Utils.PointFloat(370.3097F, 31.99999F);
+            this.xrLine38.Name = "xrLine38";
+            this.xrLine38.SizeF = new System.Drawing.SizeF(439.6903F, 2.058701F);
+            // 
+            // xrLine37
+            // 
+            this.xrLine37.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
+            this.xrLine37.LocationFloat = new DevExpress.Utils.PointFloat(370.143F, 2.058699F);
+            this.xrLine37.Name = "xrLine37";
+            this.xrLine37.SizeF = new System.Drawing.SizeF(2.180237F, 29.9413F);
+            // 
+            // xrLine36
+            // 
+            this.xrLine36.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
+            this.xrLine36.LocationFloat = new DevExpress.Utils.PointFloat(484.6546F, 2.058699F);
+            this.xrLine36.Name = "xrLine36";
+            this.xrLine36.SizeF = new System.Drawing.SizeF(2.180237F, 29.9413F);
+            // 
+            // xrLine35
+            // 
+            this.xrLine35.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
+            this.xrLine35.LocationFloat = new DevExpress.Utils.PointFloat(586.8347F, 2.058702F);
+            this.xrLine35.Name = "xrLine35";
+            this.xrLine35.SizeF = new System.Drawing.SizeF(2.180237F, 29.9413F);
+            // 
+            // xrLine34
+            // 
+            this.xrLine34.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
+            this.xrLine34.LocationFloat = new DevExpress.Utils.PointFloat(692.2646F, 2.058699F);
+            this.xrLine34.Name = "xrLine34";
+            this.xrLine34.SizeF = new System.Drawing.SizeF(2.180237F, 29.9413F);
+            // 
+            // xrLine33
+            // 
+            this.xrLine33.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
+            this.xrLine33.LocationFloat = new DevExpress.Utils.PointFloat(807.8198F, 0F);
+            this.xrLine33.Name = "xrLine33";
+            this.xrLine33.SizeF = new System.Drawing.SizeF(2.180237F, 32F);
             // 
             // xrLine25
             // 
@@ -1275,6 +1384,8 @@ public class RepReciboPagoTipo2_2KDoce : DevExpress.XtraReports.UI.XtraReport
             this.xrLabel21.SizeF = new System.Drawing.SizeF(98.95825F, 20.91665F);
             this.xrLabel21.StylePriority.UseFont = false;
             this.xrLabel21.StylePriority.UseTextAlignment = false;
+            xrSummary1.Running = DevExpress.XtraReports.UI.SummaryRunning.Group;
+            this.xrLabel21.Summary = xrSummary1;
             this.xrLabel21.Text = "xrLabel21";
             this.xrLabel21.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             this.xrLabel21.TextFormatString = "{0:n2}";
@@ -1282,7 +1393,7 @@ public class RepReciboPagoTipo2_2KDoce : DevExpress.XtraReports.UI.XtraReport
             // xrLabel20
             // 
             this.xrLabel20.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[totalDeducciones]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "sumSum([deduccion])")});
             this.xrLabel20.Font = new System.Drawing.Font("Microsoft JhengHei", 8.25F);
             this.xrLabel20.LocationFloat = new DevExpress.Utils.PointFloat(594.2753F, 7.000001F);
             this.xrLabel20.Multiline = true;
@@ -1291,6 +1402,8 @@ public class RepReciboPagoTipo2_2KDoce : DevExpress.XtraReports.UI.XtraReport
             this.xrLabel20.SizeF = new System.Drawing.SizeF(91.93256F, 20.91665F);
             this.xrLabel20.StylePriority.UseFont = false;
             this.xrLabel20.StylePriority.UseTextAlignment = false;
+            xrSummary2.Running = DevExpress.XtraReports.UI.SummaryRunning.Group;
+            this.xrLabel20.Summary = xrSummary2;
             this.xrLabel20.Text = "xrLabel20";
             this.xrLabel20.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             this.xrLabel20.TextFormatString = "{0:n2}";
@@ -1298,7 +1411,7 @@ public class RepReciboPagoTipo2_2KDoce : DevExpress.XtraReports.UI.XtraReport
             // xrLabel19
             // 
             this.xrLabel19.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[totalAsignaciones]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "sumSum([asignacion])")});
             this.xrLabel19.Font = new System.Drawing.Font("Microsoft JhengHei", 8.25F);
             this.xrLabel19.LocationFloat = new DevExpress.Utils.PointFloat(490.8348F, 7.000001F);
             this.xrLabel19.Multiline = true;
@@ -1307,6 +1420,8 @@ public class RepReciboPagoTipo2_2KDoce : DevExpress.XtraReports.UI.XtraReport
             this.xrLabel19.SizeF = new System.Drawing.SizeF(91.23367F, 20.91665F);
             this.xrLabel19.StylePriority.UseFont = false;
             this.xrLabel19.StylePriority.UseTextAlignment = false;
+            xrSummary3.Running = DevExpress.XtraReports.UI.SummaryRunning.Group;
+            this.xrLabel19.Summary = xrSummary3;
             this.xrLabel19.Text = "xrLabel19";
             this.xrLabel19.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             this.xrLabel19.TextFormatString = "{0:n2}";
@@ -1354,103 +1469,6 @@ public class RepReciboPagoTipo2_2KDoce : DevExpress.XtraReports.UI.XtraReport
             this.deduccion.Expression = "Iif([tipo] == 2 Or [tipo] == 3, [monto] * -1, 0)";
             this.deduccion.FieldType = DevExpress.XtraReports.UI.FieldType.Decimal;
             this.deduccion.Name = "deduccion";
-            // 
-            // xrLine27
-            // 
-            this.xrLine27.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
-            this.xrLine27.LocationFloat = new DevExpress.Utils.PointFloat(86.22635F, 0F);
-            this.xrLine27.Name = "xrLine27";
-            this.xrLine27.SizeF = new System.Drawing.SizeF(2.180229F, 25.70057F);
-            // 
-            // xrLine26
-            // 
-            this.xrLine26.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
-            this.xrLine26.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
-            this.xrLine26.Name = "xrLine26";
-            this.xrLine26.SizeF = new System.Drawing.SizeF(2.180229F, 25.70057F);
-            // 
-            // xrLine28
-            // 
-            this.xrLine28.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
-            this.xrLine28.LocationFloat = new DevExpress.Utils.PointFloat(370.143F, 0F);
-            this.xrLine28.Name = "xrLine28";
-            this.xrLine28.SizeF = new System.Drawing.SizeF(2.180229F, 25.70057F);
-            // 
-            // xrLine29
-            // 
-            this.xrLine29.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
-            this.xrLine29.LocationFloat = new DevExpress.Utils.PointFloat(484.6546F, 0F);
-            this.xrLine29.Name = "xrLine29";
-            this.xrLine29.SizeF = new System.Drawing.SizeF(2.180229F, 25.70057F);
-            // 
-            // xrLine30
-            // 
-            this.xrLine30.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
-            this.xrLine30.LocationFloat = new DevExpress.Utils.PointFloat(586.7379F, 0F);
-            this.xrLine30.Name = "xrLine30";
-            this.xrLine30.SizeF = new System.Drawing.SizeF(2.180229F, 25.70057F);
-            // 
-            // xrLine31
-            // 
-            this.xrLine31.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
-            this.xrLine31.LocationFloat = new DevExpress.Utils.PointFloat(692.3615F, 0F);
-            this.xrLine31.Name = "xrLine31";
-            this.xrLine31.SizeF = new System.Drawing.SizeF(2.180229F, 25.70057F);
-            // 
-            // xrLine15
-            // 
-            this.xrLine15.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
-            this.xrLine15.LocationFloat = new DevExpress.Utils.PointFloat(692.3615F, 87.2169F);
-            this.xrLine15.Name = "xrLine15";
-            this.xrLine15.SizeF = new System.Drawing.SizeF(2.083374F, 35.78311F);
-            // 
-            // xrLine32
-            // 
-            this.xrLine32.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
-            this.xrLine32.LocationFloat = new DevExpress.Utils.PointFloat(807.8198F, 0F);
-            this.xrLine32.Name = "xrLine32";
-            this.xrLine32.SizeF = new System.Drawing.SizeF(2.180229F, 25.70057F);
-            // 
-            // xrLine33
-            // 
-            this.xrLine33.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
-            this.xrLine33.LocationFloat = new DevExpress.Utils.PointFloat(807.8198F, 0F);
-            this.xrLine33.Name = "xrLine33";
-            this.xrLine33.SizeF = new System.Drawing.SizeF(2.180237F, 32F);
-            // 
-            // xrLine34
-            // 
-            this.xrLine34.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
-            this.xrLine34.LocationFloat = new DevExpress.Utils.PointFloat(692.2646F, 2.058699F);
-            this.xrLine34.Name = "xrLine34";
-            this.xrLine34.SizeF = new System.Drawing.SizeF(2.180237F, 29.9413F);
-            // 
-            // xrLine35
-            // 
-            this.xrLine35.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
-            this.xrLine35.LocationFloat = new DevExpress.Utils.PointFloat(586.8347F, 2.058702F);
-            this.xrLine35.Name = "xrLine35";
-            this.xrLine35.SizeF = new System.Drawing.SizeF(2.180237F, 29.9413F);
-            // 
-            // xrLine36
-            // 
-            this.xrLine36.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
-            this.xrLine36.LocationFloat = new DevExpress.Utils.PointFloat(484.6546F, 2.058699F);
-            this.xrLine36.Name = "xrLine36";
-            this.xrLine36.SizeF = new System.Drawing.SizeF(2.180237F, 29.9413F);
-            // 
-            // xrLine37
-            // 
-            this.xrLine37.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
-            this.xrLine37.LocationFloat = new DevExpress.Utils.PointFloat(370.143F, 2.058699F);
-            this.xrLine37.Name = "xrLine37";
-            this.xrLine37.SizeF = new System.Drawing.SizeF(2.180237F, 29.9413F);
-            // 
-            // xrLine38
-            // 
-            this.xrLine38.LocationFloat = new DevExpress.Utils.PointFloat(370.3097F, 31.99999F);
-            this.xrLine38.Name = "xrLine38";
-            this.xrLine38.SizeF = new System.Drawing.SizeF(439.6903F, 2.058701F);
             // 
             // RepReciboPagoTipo2_2KDoce
             // 
