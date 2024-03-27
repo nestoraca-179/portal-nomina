@@ -20,6 +20,7 @@ namespace PortalNomina.Controllers
         {
             report.Parameters["fechaDesde"].Value = fecha_d;
             report.Parameters["fechaHasta"].Value = fecha_h;
+            report.Parameters["DB"].Value = "DEMON";
 
             return PartialView("~/Views/Home/_RepReciboPagoTipo2_2KDocePartial.cshtml", report);
         }

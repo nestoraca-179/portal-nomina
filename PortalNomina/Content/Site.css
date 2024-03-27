@@ -1,4 +1,41 @@
-﻿.main-container {
+﻿/* ESTILO GENERICO */
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none !important;
+}
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+header {
+    
+}
+body > div.container-fluid {
+
+}
+.menu {
+    background: #3A6388;
+}
+.menu ul li a {
+    color: #FFF;
+}
+.banner {
+    background: #EEEEEE;
+}
+footer {
+    
+}
+header, footer {
+    width: 100%;
+    flex: 1;
+    background: #64B5F6;
+}
+
+/* LOGIN */
+.main-container {
     width: 847px;
     height: 100vh; /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#5a5bf3+0,91e7d9+100 */
     background: #5a5bf3; /* Old browsers */
