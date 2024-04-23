@@ -1,0 +1,109 @@
+﻿@{
+    ViewBag.Title = "Recibo de Pago";
+}
+<style>
+    #RepReciboPagoTipo2_2KDoce {
+        height: 100% !important;
+    }
+</style>
+<div class="container-report">
+    @*@Html.ActionLink("Enviar por correo", "RepReciboPagoTipo2_2KDocePartialExport", "Reports")*@
+    @*<button type="button" id="btnSendReport" disabled onclick="getParams()">Enviar Reporte por correo</button>*@
+    <button type="button" id="btnSendReport" class="btn btn-primary" disabled onclick="setParams()">Enviar Reporte por correo</button>
+    @Html.Action("RepReciboPagoTipo2_2KDocePartial", "Reports")
+</div>
+<div class="modal fade" id="modalEnviarReporte" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Enviar Reporte</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="form-label">Fecha Desde</label>
+                            <input type="datetime-local" id="fecDesde" class="form-control" disabled />
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="form-label">Fecha Hasta</label>
+                            <input type="datetime-local" id="fecHasta" class="form-control" disabled />
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="form-label">Trabajador</label>
+                            <input type="text" id="trabajador" class="form-control" disabled />
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label class="form-label">Email</label>
+                            <input type="email" id="email" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary" onclick="getParams()">Enviar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var empleados = @Html.Raw(Json.Encode(ViewBag.empleados));
+
+    $(document).ready(function () {
+        $("li#ReciboPago").addClass("active");
+    });
+
+    function setParams() {
+        var inputs = document.querySelectorAll(".dx-fieldset input[type=hidden]");
+
+        if (inputs[2].value == null || inputs[2].value == "") {
+            alert("No has seleccionado ningun trabajador");
+            return;
+        }
+
+        $("#fecDesde").val(inputs[0].value);
+        $("#fecHasta").val(inputs[1].value);
+        $("#trabajador").val(inputs[2].value);
+        $("#email").val(empleados.find(e => e.cod_emp.trim() == inputs[2].value.trim()).correo_e?.trim());
+        $("#modalEnviarReporte").modal("show");
+    }
+
+    function getParams() {
+        var params = document.querySelectorAll(".dx-fieldset input[type=hidden]");
+        var strParams = "";
+
+        for (var param of params) {
+            if (param.value != null && param.value != "")
+                strParams += param.value.toString().replaceAll("-", "").trim();
+            else
+                strParams += "_"
+
+            strParams += "-";
+        }
+
+        if (!validateEmail($("#email").val())) {
+            alert("Debes ingresar un correo valido");
+            return;
+        }
+
+        strParams += $("#email").val();
+        console.log(strParams);
+        location.href = "/Reports/RepReciboPagoTipo2_2KDocePartialExport?param=" + strParams;
+    }
+
+    function validateEmail(email) {
+        const regex = /^[a-zA-Z0-9._%+-]+@@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        return regex.test(email);
+    }
+
+</script>

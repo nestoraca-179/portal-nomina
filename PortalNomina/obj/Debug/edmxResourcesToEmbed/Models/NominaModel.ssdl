@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NominaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="snemple">
+    <Key>
+      <PropertyRef Name="cod_emp" />
+    </Key>
+    <Property Name="cod_emp" Type="char" MaxLength="17" Nullable="false" />
+    <Property Name="nombres" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="apellidos" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="ci" Type="char" MaxLength="15" Nullable="false" />
+    <Property Name="pasaporte" Type="varchar" MaxLength="12" />
+    <Property Name="rif" Type="char" MaxLength="16" />
+    <Property Name="lib_militar" Type="char" MaxLength="16" />
+    <Property Name="profesion" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="nivel_acad" Type="int" Nullable="false" />
+    <Property Name="nac" Type="int" Nullable="false" />
+    <Property Name="sexo" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="edo_civ" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="correo_e" Type="varchar" MaxLength="60" />
+    <Property Name="status" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="co_cont" Type="char" MaxLength="12" Nullable="false" />
+    <Property Name="fecha_nac" Type="smalldatetime" Nullable="false" />
+    <Property Name="lugar_nac" Type="varchar" MaxLength="50" />
+    <Property Name="fecha_ing" Type="smalldatetime" Nullable="false" />
+    <Property Name="fecha_egr" Type="smalldatetime" />
+    <Property Name="tip_egr" Type="char" MaxLength="2" />
+    <Property Name="motivo" Type="varchar(max)" />
+    <Property Name="telefono" Type="varchar" MaxLength="100" />
+    <Property Name="direccion" Type="varchar(max)" />
+    <Property Name="co_depart" Type="char" MaxLength="12" Nullable="false" />
+    <Property Name="co_ubicacion" Type="char" MaxLength="8" />
+    <Property Name="co_ban" Type="char" MaxLength="8" />
+    <Property Name="co_cargo" Type="char" MaxLength="8" Nullable="false" />
+    <Property Name="foto" Type="image" />
+    <Property Name="des_foto" Type="varchar" MaxLength="200" />
+    <Property Name="cta_banc" Type="varchar" MaxLength="60" />
+    <Property Name="dis_cen" Type="xml" />
+    <Property Name="cod_cta" Type="char" MaxLength="6" />
+    <Property Name="co_ingr" Type="char" MaxLength="20" />
+    <Property Name="cod_ben" Type="char" MaxLength="10" />
+    <Property Name="cod_caja" Type="char" MaxLength="6" />
+    <Property Name="forma_pag" Type="char" MaxLength="2" />
+    <Property Name="cod_suc" Type="char" MaxLength="6" />
+    <Property Name="avisar_a" Type="varchar" MaxLength="60" />
+    <Property Name="telf_contact" Type="varchar" MaxLength="100" />
+    <Property Name="dir_contact" Type="varchar(max)" />
+    <Property Name="cod_candi" Type="char" MaxLength="12" />
+    <Property Name="carnet" Type="varchar" MaxLength="32" />
+    <Property Name="supervisor" Type="char" MaxLength="17" />
+    <Property Name="sindicalizado" Type="bit" Nullable="false" />
+    <Property Name="uniformes" Type="bit" Nullable="false" />
+    <Property Name="vehiculo" Type="bit" Nullable="false" />
+    <Property Name="talla_zap" Type="varchar" MaxLength="8" />
+    <Property Name="talla_pant" Type="varchar" MaxLength="8" />
+    <Property Name="talla_camisa" Type="varchar" MaxLength="8" />
+    <Property Name="talla_casco" Type="varchar" MaxLength="8" />
+    <Property Name="talla_otro1" Type="varchar" MaxLength="8" />
+    <Property Name="talla_otro2" Type="varchar" MaxLength="8" />
+    <Property Name="licencia" Type="varchar" MaxLength="12" />
+    <Property Name="grado_lic" Type="int" />
+    <Property Name="co_ban1" Type="char" MaxLength="8" />
+    <Property Name="cta_banc1" Type="varchar" MaxLength="60" />
+    <Property Name="cta_fecing1" Type="smalldatetime" />
+    <Property Name="tipo_cta1" Type="char" MaxLength="4" />
+    <Property Name="co_ban2" Type="char" MaxLength="8" />
+    <Property Name="cta_banc2" Type="varchar" MaxLength="60" />
+    <Property Name="cta_fecing2" Type="smalldatetime" />
+    <Property Name="tipo_cta2" Type="char" MaxLength="4" />
+    <Property Name="co_ban3" Type="char" MaxLength="8" />
+    <Property Name="cta_banc3" Type="varchar" MaxLength="60" />
+    <Property Name="cta_fecing3" Type="smalldatetime" />
+    <Property Name="tipo_cta3" Type="char" MaxLength="4" />
+    <Property Name="co_ban4" Type="char" MaxLength="8" />
+    <Property Name="cta_banc4" Type="varchar" MaxLength="60" />
+    <Property Name="cta_fecing4" Type="smalldatetime" />
+    <Property Name="cod_empresa" Type="varchar" MaxLength="60" />
+    <Property Name="fuero_sindic" Type="bit" Nullable="false" />
+    <Property Name="peso" Type="decimal" Precision="11" Scale="3" Nullable="false" />
+    <Property Name="estatura" Type="decimal" Precision="11" Scale="2" Nullable="false" />
+    <Property Name="zurdo" Type="bit" Nullable="false" />
+    <Property Name="grupo_sang" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="alergico_a" Type="varchar(max)" />
+    <Property Name="enfermedades" Type="varchar(max)" />
+    <Property Name="discapacitado" Type="bit" Nullable="false" />
+    <Property Name="co_cert" Type="varchar" MaxLength="12" />
+    <Property Name="clasificacion" Type="char" MaxLength="4" />
+    <Property Name="tratamiento" Type="varchar(max)" />
+    <Property Name="fecha_exp" Type="smalldatetime" />
+    <Property Name="fecha_venc" Type="smalldatetime" />
+    <Property Name="tipo_discapac" Type="char" MaxLength="4" />
+    <Property Name="observaciones" Type="varchar(max)" />
+    <Property Name="co_asegurado" Type="varchar" MaxLength="12" />
+    <Property Name="condicion" Type="varchar" MaxLength="4" />
+    <Property Name="rep_segindust" Type="bit" Nullable="false" />
+    <Property Name="co_repsegind" Type="varchar" MaxLength="12" />
+    <Property Name="tipo_mintra" Type="int" Nullable="false" />
+    <Property Name="ocupacion" Type="varchar" MaxLength="4" />
+    <Property Name="cert_aptitud" Type="varchar" MaxLength="16" />
+    <Property Name="perm_menor" Type="varchar" MaxLength="16" />
+    <Property Name="estado" Type="varchar" MaxLength="20" />
+    <Property Name="municipio" Type="varchar" MaxLength="20" />
+    <Property Name="parroquia" Type="varchar" MaxLength="20" />
+    <Property Name="ubicacion" Type="varchar" MaxLength="20" />
+    <Property Name="tipo_cont" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="campo1" Type="varchar" MaxLength="60" />
+    <Property Name="campo2" Type="varchar" MaxLength="60" />
+    <Property Name="campo3" Type="varchar" MaxLength="60" />
+    <Property Name="campo4" Type="varchar" MaxLength="60" />
+    <Property Name="campo5" Type="varchar" MaxLength="60" />
+    <Property Name="campo6" Type="varchar" MaxLength="60" />
+    <Property Name="campo7" Type="varchar" MaxLength="60" />
+    <Property Name="campo8" Type="varchar" MaxLength="60" />
+    <Property Name="co_us_in" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="fe_us_in" Type="datetime" Nullable="false" />
+    <Property Name="co_us_mo" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="fe_us_mo" Type="datetime" Nullable="false" />
+    <Property Name="trasnfe" Type="char" MaxLength="1" />
+    <Property Name="revisado" Type="char" MaxLength="1" />
+    <Property Name="validador" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="nombre_completo" Type="varchar" MaxLength="122" StoreGeneratedPattern="Computed" />
+    <Property Name="correo_e_2" Type="varchar" MaxLength="60" />
+    <Property Name="cargosueldo" Type="bit" Nullable="false" />
+    <Property Name="co_mone" Type="char" MaxLength="6" />
+  </EntityType>
+  <Association Name="FK_snemple_snemple">
+    <End Role="snemple" Type="Self.snemple" Multiplicity="0..1" />
+    <End Role="snemple1" Type="Self.snemple" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="snemple">
+        <PropertyRef Name="cod_emp" />
+      </Principal>
+      <Dependent Role="snemple1">
+        <PropertyRef Name="supervisor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="NominaModelStoreContainer">
+    <EntitySet Name="snemple" EntityType="Self.snemple" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_snemple_snemple" Association="Self.FK_snemple_snemple">
+      <End Role="snemple" EntitySet="snemple" />
+      <End Role="snemple1" EntitySet="snemple" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

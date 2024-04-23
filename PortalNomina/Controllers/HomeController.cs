@@ -1,3 +1,4 @@
+using PortalNomina.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +17,15 @@ namespace PortalNomina.Controllers
         [Authorize]
         public ActionResult Dashboard()
         {
+            return View();
+        }
+
+        [Authorize]
+        public ActionResult ReciboPago()
+        {
+            List<snemple> empleados = new NominaEntities().snemple.AsNoTracking().ToList();
+            ViewBag.empleados = empleados;
+
             return View();
         }
     }

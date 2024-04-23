@@ -31,10 +31,13 @@ namespace PortalNomina.Controllers
             #region PRUEBAS ENVIO DE CORREO
             try
             {
+                string[] values = param.Split('-');
+
                 // Generar el reporte utilizando DevExpress Reporting
                 RepReciboPagoTipo2_2KDoce report = new RepReciboPagoTipo2_2KDoce();
-                report.Parameters["fechaDesde"].Value = new DateTime(2005, 1, 1);
-                report.Parameters["fechaHasta"].Value = new DateTime(2005, 1, 31);
+                report.Parameters["fechaDesde"].Value = DateTime.ParseExact(values[0], "yyyyMMddTHH:mm:ss", null); // new DateTime(2005, 1, 1);
+                report.Parameters["fechaHasta"].Value = DateTime.ParseExact(values[1], "yyyyMMddTHH:mm:ss", null); // new DateTime(2005, 1, 31);
+                report.Parameters["codEmpleado"].Value = values[2]; // new DateTime(2005, 1, 31);
 
                 // Exportar el reporte a PDF
                 MemoryStream stream = new MemoryStream();
@@ -47,8 +50,8 @@ namespace PortalNomina.Controllers
                 // Crear el correo electrónico
                 MailMessage mail = new MailMessage();
                 mail.From = new MailAddress("nestoraca.179@gmail.com");
-                mail.To.Add("acarreno@gtsconsultingca.com");
-                mail.Subject = "Informe Adjunto 2";
+                mail.To.Add(values[3]);
+                mail.Subject = "Informe Adjunto 3";
                 mail.Body = "Adjunto encontrarás el informe solicitado.";
                 mail.Attachments.Add(attachment);
 

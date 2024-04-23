@@ -267,3 +267,5 @@ C:\Temp\ac\developer\c#\PortalNomina\PortalNomina\obj\Debug\PortalNomina.csproj.
 C:\Temp\ac\developer\c#\PortalNomina\PortalNomina\obj\Debug\PortalNomina.csproj.CopyComplete
 C:\Temp\ac\developer\c#\PortalNomina\PortalNomina\obj\Debug\PortalNomina.dll
 C:\Temp\ac\developer\c#\PortalNomina\PortalNomina\obj\Debug\PortalNomina.pdb
+C:\Temp\ac\developer\c#\PortalNomina\PortalNomina\bin\EntityFramework.dll
+C:\Temp\ac\developer\c#\PortalNomina\PortalNomina\bin\EntityFramework.xml

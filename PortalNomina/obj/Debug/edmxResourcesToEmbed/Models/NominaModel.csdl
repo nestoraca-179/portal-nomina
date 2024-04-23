@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NominaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="snemple">
+    <Key>
+      <PropertyRef Name="cod_emp" />
+    </Key>
+    <Property Name="cod_emp" Type="String" MaxLength="17" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="nombres" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="apellidos" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ci" Type="String" MaxLength="15" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="pasaporte" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="rif" Type="String" MaxLength="16" FixedLength="true" Unicode="false" />
+    <Property Name="lib_militar" Type="String" MaxLength="16" FixedLength="true" Unicode="false" />
+    <Property Name="profesion" Type="String" MaxLength="4" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="nivel_acad" Type="Int32" Nullable="false" />
+    <Property Name="nac" Type="Int32" Nullable="false" />
+    <Property Name="sexo" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="edo_civ" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="correo_e" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="co_cont" Type="String" MaxLength="12" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="fecha_nac" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="lugar_nac" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="fecha_ing" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="fecha_egr" Type="DateTime" Precision="0" />
+    <Property Name="tip_egr" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="motivo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="telefono" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="direccion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="co_depart" Type="String" MaxLength="12" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="co_ubicacion" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="co_ban" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="co_cargo" Type="String" MaxLength="8" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="foto" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="des_foto" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="cta_banc" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="dis_cen" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="cod_cta" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="co_ingr" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="cod_ben" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="cod_caja" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="forma_pag" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="cod_suc" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="avisar_a" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="telf_contact" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="dir_contact" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="cod_candi" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+    <Property Name="carnet" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="supervisor" Type="String" MaxLength="17" FixedLength="true" Unicode="false" />
+    <Property Name="sindicalizado" Type="Boolean" Nullable="false" />
+    <Property Name="uniformes" Type="Boolean" Nullable="false" />
+    <Property Name="vehiculo" Type="Boolean" Nullable="false" />
+    <Property Name="talla_zap" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="talla_pant" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="talla_camisa" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="talla_casco" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="talla_otro1" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="talla_otro2" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="licencia" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="grado_lic" Type="Int32" />
+    <Property Name="co_ban1" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="cta_banc1" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="cta_fecing1" Type="DateTime" Precision="0" />
+    <Property Name="tipo_cta1" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="co_ban2" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="cta_banc2" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="cta_fecing2" Type="DateTime" Precision="0" />
+    <Property Name="tipo_cta2" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="co_ban3" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="cta_banc3" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="cta_fecing3" Type="DateTime" Precision="0" />
+    <Property Name="tipo_cta3" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="co_ban4" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="cta_banc4" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="cta_fecing4" Type="DateTime" Precision="0" />
+    <Property Name="cod_empresa" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="fuero_sindic" Type="Boolean" Nullable="false" />
+    <Property Name="peso" Type="Decimal" Precision="11" Scale="3" Nullable="false" />
+    <Property Name="estatura" Type="Decimal" Precision="11" Scale="2" Nullable="false" />
+    <Property Name="zurdo" Type="Boolean" Nullable="false" />
+    <Property Name="grupo_sang" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="alergico_a" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="enfermedades" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="discapacitado" Type="Boolean" Nullable="false" />
+    <Property Name="co_cert" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="clasificacion" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="tratamiento" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="fecha_exp" Type="DateTime" Precision="0" />
+    <Property Name="fecha_venc" Type="DateTime" Precision="0" />
+    <Property Name="tipo_discapac" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="observaciones" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="co_asegurado" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="condicion" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="rep_segindust" Type="Boolean" Nullable="false" />
+    <Property Name="co_repsegind" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="tipo_mintra" Type="Int32" Nullable="false" />
+    <Property Name="ocupacion" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="cert_aptitud" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Name="perm_menor" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Name="estado" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="municipio" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="parroquia" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ubicacion" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="tipo_cont" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="campo1" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="campo2" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="campo3" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="campo4" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="campo5" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="campo6" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="campo7" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="campo8" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="co_us_in" Type="String" MaxLength="6" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="fe_us_in" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="co_us_mo" Type="String" MaxLength="6" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="fe_us_mo" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="trasnfe" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="revisado" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="validador" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="nombre_completo" Type="String" MaxLength="122" FixedLength="false" Unicode="false" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="correo_e_2" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="cargosueldo" Type="Boolean" Nullable="false" />
+    <Property Name="co_mone" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="snemple1" Relationship="Self.FK_snemple_snemple" FromRole="snemple" ToRole="snemple1" />
+    <NavigationProperty Name="snemple2" Relationship="Self.FK_snemple_snemple" FromRole="snemple1" ToRole="snemple" />
+  </EntityType>
+  <Association Name="FK_snemple_snemple">
+    <End Role="snemple" Type="Self.snemple" Multiplicity="0..1" />
+    <End Role="snemple1" Type="Self.snemple" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="snemple">
+        <PropertyRef Name="cod_emp" />
+      </Principal>
+      <Dependent Role="snemple1">
+        <PropertyRef Name="supervisor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="NominaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="snemple" EntityType="Self.snemple" />
+    <AssociationSet Name="FK_snemple_snemple" Association="Self.FK_snemple_snemple">
+      <End Role="snemple" EntitySet="snemple" />
+      <End Role="snemple1" EntitySet="snemple" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

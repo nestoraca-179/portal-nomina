@@ -11,13 +11,21 @@ body {
     flex-direction: column;
 }
 header {
-    
+    border-bottom: solid 1px #7B7B7B;
 }
 body > div.container-fluid {
 
 }
 .menu {
-    background: #3A6388;
+    background: #333;
+    border-right: solid 1px #7B7B7B;
+}
+.menu ul li {
+    padding: 15px;
+}
+.menu ul li:hover, .menu ul li.active {
+    background: #5b5b5b; 
+    border-left: solid 5px #cccccc;
 }
 .menu ul li a {
     color: #FFF;
@@ -26,12 +34,12 @@ body > div.container-fluid {
     background: #EEEEEE;
 }
 footer {
-    
+    border-top: solid 1px #7B7B7B;
 }
 header, footer {
     width: 100%;
     flex: 1;
-    background: #64B5F6;
+    background: #CCC;
 }
 
 /* LOGIN */
@@ -67,4 +75,20 @@ header, footer {
 }
 .main-container > .container form button {
     margin: 0 auto;
+}
+
+/* REPORT VIEWER */
+.container-report {
+    height: 650px;
+    overflow-y: auto;
+    position: relative;
+}
+.container-report button {
+    position: absolute;
+    bottom: 20px;
+    right: 120px;
+    z-index: 1;
+}
+#modalEnviarReporte .modal-dialog {
+    max-width: 700px;
 }
