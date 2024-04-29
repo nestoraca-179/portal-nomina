@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "Editar";
+}
+
+<div class="container-page">
+    <div class="row mx-0 my-3">
+        <div class="col">
+            <h2 class="text-center">Editar</h2>
+        </div>
+    </div>
+    <form action="/Users/ProcessEditar" method="post" class="w-50">
+        <input type="hidden" name="id" id="id" />
+        <div class="form-group">
+            <label>Nombre</label>
+            <input type="text" name="name" id="name" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label>Usuario</label>
+            <input type="text" name="user" id="user" class="form-control" />
+        </div>
+        <div class="form-group my-3">
+            <label>Clave</label>
+            <input type="password" name="pass" id="password" class="form-control" />
+        </div>
+        <div class="form-check">
+            <input type="checkbox" name="active" id="active" class="form-check-input">
+            <label class="form-check-label">Activo</label>
+        </div>
+        <div class="form-check my-3">
+            <input type="checkbox" name="admin" id="admin" class="form-check-input">
+            <label class="form-check-label">Administrador</label>
+        </div>
+        <button type="submit" class="btn btn-primary mt-4">Guardar</button>
+    </form>
+</div>
+<script>
+    var us = @Html.Raw(Json.Encode(ViewBag.userEdit));
+
+    $("#id").val(us.ID);
+    $("#name").val(us.Nombre);
+    $("#user").val(us.Username);
+    $("#password").val(us.Password);
+    $("#active").prop("checked", us.Active);
+    $("#admin").prop("checked", us.IsAdmin);
+</script>

@@ -13,6 +13,38 @@ body {
 header {
     border-bottom: solid 1px #7B7B7B;
 }
+.app-title {
+    color: #333;
+    font-size: 25px;
+}
+.user-active {
+    width: 40%;
+    max-width: 200px;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #333;
+    font-size: 15px;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+}
+.dropdown-menu {
+    width: 100%;
+    text-align: center !important;
+    background: #F0EFEF;
+    border-radius: 0 !important;
+    border: 0;
+    border-top: 0;
+    box-shadow: -5px 5px 15px -5px rgba(0,0,0,0.7) !important;
+    -webkit-box-shadow: -5px 5px 15px -5px rgba(0,0,0,0.7) !important;
+    -moz-box-shadow: -5px 5px 15px -5px rgba(0,0,0,0.7) !important;
+    position: absolute;
+    left: 0;
+    top: 100%;
+}
 body > div.container-fluid {
 
 }
@@ -40,6 +72,10 @@ header, footer {
     width: 100%;
     flex: 1;
     background: #CCC;
+}
+.container-page {
+    height: 650px;
+    overflow-y: auto;
 }
 
 /* LOGIN */

@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Usuarios";
+}
+<div class="container-page">
+    @{ 
+        if (!string.IsNullOrEmpty(ViewBag.Message))
+        {
+            <div class="@ViewBag.Style mt-3">
+                <p class="m-0">@ViewBag.Message</p>
+            </div>
+        }
+    }
+    <h2 class="text-center my-4">Usuarios</h2>
+    <div class="d-flex justify-content-center">
+        @Html.Action("UsersGridViewPartial")
+    </div>
+</div>

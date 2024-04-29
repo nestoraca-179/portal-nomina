@@ -1,0 +1,56 @@
+@Html.DevExpress().GetStyleSheets(
+    new StyleSheet { ExtensionSuite = ExtensionSuite.NavigationAndLayout, Theme = "Material" }
+)
+
+@{
+    var grid = Html.DevExpress().GridView(settings =>
+    {
+        settings.Name = "UsersGridView";
+        settings.Theme = "Material";
+        settings.CallbackRouteValues = new { Controller = "Users", Action = "UsersGridViewPartial" };
+        settings.Width = Unit.Percentage(100);
+
+        settings.KeyFieldName = "ID";
+
+        settings.SettingsPager.Visible = true;
+        settings.Settings.ShowGroupPanel = false;
+        settings.Settings.ShowFilterRow = true;
+        settings.SettingsBehavior.AllowSelectByRowClick = true;
+
+        settings.SettingsAdaptivity.AdaptivityMode = GridViewAdaptivityMode.Off;
+        settings.SettingsAdaptivity.AdaptiveColumnPosition = GridViewAdaptiveColumnPosition.Right;
+        settings.SettingsAdaptivity.AdaptiveDetailColumnCount = 1;
+        settings.SettingsAdaptivity.AllowOnlyOneAdaptiveDetailExpanded = false;
+        settings.SettingsAdaptivity.HideDataCellsAtWindowInnerWidth = 0;
+
+        settings.Columns.Add(c =>
+        {
+            c.Caption = "#";
+            c.SetDataItemTemplateContent(tc =>
+            {
+                ViewContext.Writer.Write(
+                    Html.ActionLink("Editar", "Editar", new { ID = DataBinder.Eval(tc.DataItem, "ID") }) + "&nbsp;" +
+                    Html.ActionLink("Eliminar", "Eliminar", new { ID = DataBinder.Eval(tc.DataItem, "ID") },
+                        new { onclick = "return confirm('Seguro desea eliminar este usuario?')" })
+                );
+            });
+            c.SetHeaderTemplateContent(tc =>
+            {
+                ViewContext.Writer.Write(
+                    Html.ActionLink("Nuevo", "Agregar").ToHtmlString()
+                );
+            });
+            c.Settings.AllowDragDrop = DefaultBoolean.False;
+            c.Settings.AllowSort = DefaultBoolean.False;
+            c.Width = 70;
+        });
+        settings.Columns.Add("ID");
+        settings.Columns.Add("Nombre");
+        settings.Columns.Add("Username", "Usuario");
+        settings.Columns.Add("DateReg", "Fecha de Registro");
+        settings.Columns.Add("Active", "Activo");
+        settings.Columns.Add("IsAdmin", "Administrador");
+        settings.Columns.Add("CreatedBy", "Creado Por");
+    });
+}
+@grid.Bind(Model).GetHtml()

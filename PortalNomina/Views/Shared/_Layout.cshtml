@@ -30,9 +30,17 @@
     <header>
         <div class="row m-0 h-100">
             <div class="col-md-2 d-flex justify-content-center align-items-center">
-                <a class="text-center w-100" href="/Home/Dashboard">Portal Nomina</a>
+                <a class="text-center w-100 app-title" href="/Home/Dashboard">Portal Nomina</a>
             </div>
-            <div class="col-md-10"></div>
+            <div class="col-md-10" style="position: relative;">
+                <div class="user-active" role="button" id="drop-menu" onclick="$('#dropdown-menu').slideToggle();">
+                    <i class="fas fa-user icon-user"></i>
+                    <p class="mb-0">@ViewBag.User.Nombre</p>
+                    <div class="dropdown-menu" id="dropdown-menu">
+                        <a href="/Account/Logout">Cerrar Sesion</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
     <div class="container-fluid">
@@ -40,7 +48,12 @@
             <div class="col-md-2 p-0 menu">
                 <ul class="p-0">
                     <li id="ReciboPago"><a href="/Home/ReciboPago"><i class="fas fa-file mx-2"></i> Recibo de Pago</a></li>
-                    <li><a href="#"><i class="fas fa-cog fa-spin mx-2"></i> Configuracion</a></li>
+                    @{
+                        if (ViewBag.User.IsAdmin)
+                        {
+                            <li><a href="/Users/Index"><i class="fas fa-user mx-2"></i> Usuarios</a></li>
+                        }
+                    }
                 </ul>
             </div>
             <div class="col-md-10 banner">
@@ -48,8 +61,8 @@
             </div>
         </div>
     </div>
-    <footer>
-
+    <footer class="d-flex align-items-center">
+        <p class="mx-3 my-0">&copy; 2024 - AC Solutions</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>

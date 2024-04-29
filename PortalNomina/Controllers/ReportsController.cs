@@ -1,11 +1,7 @@
-﻿using DevExpress.Web.Mvc;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.IO;
-using System.Linq;
 using System.Net;
 using System.Net.Mail;
-using System.Web;
 using System.Web.Mvc;
 
 namespace PortalNomina.Controllers
@@ -26,9 +22,6 @@ namespace PortalNomina.Controllers
         }
         public ActionResult RepReciboPagoTipo2_2KDocePartialExport(string param = "")
         {
-            // return DocumentViewerExtension.ExportTo(report, Request);
-
-            #region PRUEBAS ENVIO DE CORREO
             try
             {
                 string[] values = param.Split('-');
@@ -71,7 +64,6 @@ namespace PortalNomina.Controllers
             {
                 return Content("El informe no pudo ser enviado correctamente: " + ex.Message);
             }
-            #endregion
         }
     }
 }

@@ -37,6 +37,7 @@ C:\Temp\ac\developer\c#\PortalNomina\PortalNomina\bin\DevExpress.XtraReports.v18
 C:\Temp\ac\developer\c#\PortalNomina\PortalNomina\bin\DevExpress.XtraReports.v18.2.Web.dll
 C:\Temp\ac\developer\c#\PortalNomina\PortalNomina\bin\DevExpress.XtraReports.v18.2.Web.WebForms.dll
 C:\Temp\ac\developer\c#\PortalNomina\PortalNomina\bin\DevExpress.XtraTreeMap.v18.2.dll
+C:\Temp\ac\developer\c#\PortalNomina\PortalNomina\bin\EntityFramework.dll
 C:\Temp\ac\developer\c#\PortalNomina\PortalNomina\bin\Microsoft.Web.Infrastructure.dll
 C:\Temp\ac\developer\c#\PortalNomina\PortalNomina\bin\Newtonsoft.Json.Bson.dll
 C:\Temp\ac\developer\c#\PortalNomina\PortalNomina\bin\Newtonsoft.Json.dll
@@ -67,6 +68,7 @@ C:\Temp\ac\developer\c#\PortalNomina\PortalNomina\bin\DevExpress.Web.ASPxTreeLis
 C:\Temp\ac\developer\c#\PortalNomina\PortalNomina\bin\DevExpress.XtraLayout.v18.2.dll
 C:\Temp\ac\developer\c#\PortalNomina\PortalNomina\bin\DevExpress.XtraBars.v18.2.dll
 C:\Temp\ac\developer\c#\PortalNomina\PortalNomina\bin\DevExpress.XtraTreeList.v18.2.dll
+C:\Temp\ac\developer\c#\PortalNomina\PortalNomina\bin\EntityFramework.xml
 C:\Temp\ac\developer\c#\PortalNomina\PortalNomina\bin\Newtonsoft.Json.xml
 C:\Temp\ac\developer\c#\PortalNomina\PortalNomina\bin\Newtonsoft.Json.Bson.pdb
 C:\Temp\ac\developer\c#\PortalNomina\PortalNomina\bin\Newtonsoft.Json.Bson.xml
@@ -267,5 +269,5 @@ C:\Temp\ac\developer\c#\PortalNomina\PortalNomina\obj\Debug\PortalNomina.csproj.
 C:\Temp\ac\developer\c#\PortalNomina\PortalNomina\obj\Debug\PortalNomina.csproj.CopyComplete
 C:\Temp\ac\developer\c#\PortalNomina\PortalNomina\obj\Debug\PortalNomina.dll
 C:\Temp\ac\developer\c#\PortalNomina\PortalNomina\obj\Debug\PortalNomina.pdb
-C:\Temp\ac\developer\c#\PortalNomina\PortalNomina\bin\EntityFramework.dll
-C:\Temp\ac\developer\c#\PortalNomina\PortalNomina\bin\EntityFramework.xml
+C:\Temp\ac\developer\c#\PortalNomina\PortalNomina\bin\EntityFramework.SqlServer.dll
+C:\Temp\ac\developer\c#\PortalNomina\PortalNomina\bin\EntityFramework.SqlServer.xml
