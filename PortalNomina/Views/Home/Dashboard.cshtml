@@ -3,4 +3,12 @@
 }
 <div class="container-page">
     <h2 class="m-3" style="font-weight: 100;">Bienvenido @(ViewBag.User.Nombre)!</h2>
+    @{
+        if (!string.IsNullOrEmpty(ViewBag.Message))
+        {
+            <div class="@ViewBag.Style mt-1">
+                <p class="m-0">@ViewBag.Message</p>
+            </div>
+        }
+    }
 </div>

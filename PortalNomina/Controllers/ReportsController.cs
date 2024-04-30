@@ -22,6 +22,9 @@ namespace PortalNomina.Controllers
         }
         public ActionResult RepReciboPagoTipo2_2KDocePartialExport(string param = "")
         {
+            string message;
+            bool error = false;
+
             try
             {
                 string[] values = param.Split('-');
@@ -42,28 +45,31 @@ namespace PortalNomina.Controllers
 
                 // Crear el correo electrónico
                 MailMessage mail = new MailMessage();
-                mail.From = new MailAddress("nestoraca.179@gmail.com");
+                mail.From = new MailAddress("operadoradeserviciosrrhhac3@gmail.com", "Operadora de Servicios");
                 mail.To.Add(values[3]);
-                mail.Subject = "Informe Adjunto 3";
-                mail.Body = "Adjunto encontrarás el informe solicitado.";
+                mail.Subject = "Recibo de Pago";
+                mail.Body = "Adjunto encontrarás el recibo correspondiente.";
                 mail.Attachments.Add(attachment);
 
                 // Configurar el servidor SMTP saliente
                 SmtpClient smtpClient = new SmtpClient("smtp.gmail.com");
                 smtpClient.Port = 587;
-                smtpClient.Credentials = new NetworkCredential("nestoraca.179@gmail.com", "zied gguv vlve jmvj");
+                smtpClient.Credentials = new NetworkCredential("operadoradeserviciosrrhhac3@gmail.com", "jsyb qnmq pwsf nwar");
                 smtpClient.EnableSsl = true;
                 smtpClient.Timeout = 10000;
 
                 // Enviar el correo electrónico
                 smtpClient.Send(mail);
 
-                return Content("El informe ha sido enviado por correo electrónico correctamente.");
+                message = "El informe ha sido enviado por correo electrónico correctamente.";
             }
             catch (Exception ex)
             {
-                return Content("El informe no pudo ser enviado correctamente: " + ex.Message);
+                message = "Ha ocurrido un error: " + ex.Message;
+                error = true;
             }
+
+            return RedirectToAction("Dashboard", "Home", new { message, error });
         }
     }
 }

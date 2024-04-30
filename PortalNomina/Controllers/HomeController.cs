@@ -16,9 +16,11 @@ namespace PortalNomina.Controllers
         }
 
         [Authorize]
-        public ActionResult Dashboard()
+        public ActionResult Dashboard(string message = "", bool error = false)
         {
             ViewBag.User = Session["USER"] as Users;
+            ViewBag.Message = message;
+            ViewBag.Style = error ? "alert alert-danger" : "alert alert-success";
 
             return View();
         }
